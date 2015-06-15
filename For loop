@@ -1,0 +1,20 @@
+
+            // For Loop
+            // Change values to display different results
+
+            // Remove " /*  */ " to test code
+            
+            /*
+
+            Console.WriteLine("For Loop"); // Shows "For Loop" string in the Console Window
+
+            for (int i = 0; i < 10; i++) // Creates a for loop instruction and an integer ' i ' with the value 0, while ' i ' is lower than 10, add one number
+            {
+                Console.WriteLine(i); // Display value of ' i ' until condition is met
+            }
+            // Pro tip: integers on C# starts at number 0.
+            // Pro tip: Once ' i ' reaches value 10, it no longer executes the ++ function, making last value ' 9 '
+            
+            Console.ReadLine(); // Holds Console window open       
+                        
+            */
