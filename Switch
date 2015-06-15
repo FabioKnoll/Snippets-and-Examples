@@ -1,0 +1,38 @@
+            // Switch Example regarding name
+            // Remove " /*  */ " to test code
+            
+            /*
+            
+            // Provides value to the string 'name'
+            // Change value for different result
+            // Possible to add multiple cases
+            string name = "John" ;
+            
+            // Opens the switch block function for the string 'name'
+            switch (name)
+            {
+                case "John": // Checks condition, if positive execute
+
+                Console.WriteLine("The name is John"); // Instruction to be executed
+                    break; // If positive and executed, move outside
+
+                case "Alex": // Checks condition, if positive execute
+
+                Console.WriteLine("The name is Alex"); // Instruction to be executed
+                    break;  // If positive and executed, move outside
+
+                case "Brian": // Checks condition, if positive execute
+
+                Console.WriteLine("The name is Brian"); // Instruction to be executed
+                    break; // If positive and executed, move outside
+
+                default: // Allows action to be taken
+                    Console.WriteLine("Case name not found. Value of string name is: " + name + "."); // If no case conditions meet on 'name' string, execute this.
+                    break; // If positive and executed, move outside
+            }
+
+            // Holds Console window open       
+
+            Console.ReadLine(); 
+            
+            */
