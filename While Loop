@@ -1,0 +1,23 @@
+            // While conditional Loop
+            // Remove " /*  */ " to test code
+            
+            /*
+            
+            // Bool (boolean) refers to a value that can be either true or false
+            // Change number for different results
+            // Possible to do infinite loop, double check the logic
+
+            Console.WriteLine("Using while loop"); // Simple message
+            bool cond = true; // Sets bool 'cond' to true
+            int counter = 50; // creates integer named 'counter' and sets value to '50'
+
+            while (cond) // while boolean 'cond' is true, execute
+            {
+                if (counter == 60) cond = false; // Once counter equals 60 turns bool 'count' from true to false
+                    Console.WriteLine(counter++); // Adds one number with '++' at the end of the int 'counter' until condition is met and returns result after executed
+            }
+
+            Console.ReadLine(); // Holds Console window open       
+
+            */
+            
