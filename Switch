@@ -27,7 +27,7 @@
                     break; // If positive and executed, move outside
 
                 default: // Allows action to be taken
-                    Console.WriteLine("Case name not found. Value of string name is: " + name + "."); // If no case conditions meet on 'name' string, execute this.
+                    Console.WriteLine("Case name not found. Value of string name is: " + name + "."); // If no case conditions were met on the string 'name', execute this.
                     break; // If positive and executed, move outside
             }
 
