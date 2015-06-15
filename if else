@@ -1,0 +1,22 @@
+            // if else Example regarding age
+            // Remove " /*  */ " to test code
+            
+            /*
+            
+            // Provides value to the variable var
+            // Change value for different result
+            var age = 16;
+ 
+            // Conditional 'if'checked if positive execute, if negative execute 'else' block
+            // String values placed inside quotes ( " " )
+             
+
+            if (age >= 18) Console.WriteLine("Subject is older than 18, having " + age + " years old.");
+
+            else Console.WriteLine("Subject is younger than 18, having " + age + " years old.");
+
+            // Holds Console window open       
+
+            Console.ReadLine(); 
+            
+            */
