@@ -1,0 +1,16 @@
+            // Foreach conditional Loop
+            // Remove " /*  */ " to test code
+            
+            /*
+            
+            // Foreach loop organized into an array
+
+            string[] areas = { "DTI", "DPE", "WIN", "COR" }; // Declaring wich strings are inside the array 'areas'
+            foreach (var item in areas) // Declares variable 'item' and searches inside array 'areas
+            {
+                Console.WriteLine(item); // Executes instruction to show whats inside the array 'areas'
+            }
+
+            Console.ReadLine(); // Holds Console window open       
+                        
+             */
