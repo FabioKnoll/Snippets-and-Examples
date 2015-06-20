@@ -1,22 +1,39 @@
+
             // if else Example regarding age
             // Remove " /*  */ " to test code
-            
+
             /*
             
-            // Provides value to the variable var
-            // Change value for different result
-            var age = 16;
+            var age = 16; // Creates variable 'age' and provide value '16' to it. Change it for a different result.
  
             // Conditional 'if'checked if positive execute, if negative execute 'else' block
             // String values placed inside quotes ( " " )
              
-
             if (age >= 18) Console.WriteLine("Subject is older than 18, having " + age + " years old.");
 
             else Console.WriteLine("Subject is younger than 18, having " + age + " years old.");
 
-            // Holds Console window open       
+            Console.ReadLine(); //Holds Console window open
+            
+            */
 
-            Console.ReadLine(); 
+            // PORTUGUESE BELLOW:
+
+            // Exemplo de variável 'if' (se) referente a idade
+            // Remova " /*  */ " para testar o código
+           
+            /*
+            
+            var idade = 16; // Cria a variável 'idade' e atribui o valor inteiro de '16'. Altere para diferente resultado
+ 
+            // Condicional 'if' (se) avaliada se positivo, execute, se negativo execute 'else'.
+            // String colocada entre ( " " )
+             
+
+            if (idade >= 18) Console.WriteLine("Pessoa é maior de idade, tendo " + idade + " anos."); // Se idade maior ou igual a 18, escreva.
+
+            else Console.WriteLine("Pessoa é menor de idade, tendo " + idade + " anos."); // Se idade menor que 18, escreva.
+
+            Console.ReadLine(); // Mantém a janela do console aberta.
             
             */
