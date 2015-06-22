@@ -10,7 +10,7 @@ namespace MVA_Mod1PTBR
     {
         static void Main(string[] args)
         {
-           var obj = new Jogador(25)
+           var obj = new Jogador(25) // 25 é o construtor 'idade' da classe
            {
                id = 10,
                nome = "Paulo",
@@ -18,7 +18,7 @@ namespace MVA_Mod1PTBR
            };
             Console.WriteLine("A id do Jogador é " + obj.id + ", nome " + obj.nome + " e a modalidade " +obj.modalidade + ".");
 
-            var objX = new Xadrez(27)
+            var objX = new Xadrez(27) // 27 é o construtor 'idade' da classe
             {
                 nivel = "avançado",
                 rating = 10000,
@@ -32,7 +32,7 @@ namespace MVA_Mod1PTBR
     }
     public class Jogador
     {
-        public int idade;
+        public int idade; // Declaração construtor 'idade' para classe 'Jogador'
         public Jogador(int idade)
         {
             this.idade = idade;
@@ -53,7 +53,7 @@ namespace MVA_Mod1PTBR
         {
         public Xadrez(int idade):base(10)
         {
-            this.idade = idade;
+            this.idade = idade; // Declaração construtor 'idade' para classe 'Xadrez'
         }
         public string nivel { get; set; }
         public int rating { get; set; }
