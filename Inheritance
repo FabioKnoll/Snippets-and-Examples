@@ -1,0 +1,61 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace MVA_Mod1PTBR
+{
+    class objetoJogador
+    {
+        static void Main(string[] args)
+        {
+           var obj = new Jogador(25)
+           {
+               id = 10,
+               nome = "Paulo",
+               modalidade = "xadrez"
+           };
+            Console.WriteLine("A id do Jogador é " + obj.id + ", nome " + obj.nome + " e a modalidade " +obj.modalidade + ".");
+
+            var objX = new Xadrez(27)
+            {
+                nivel = "avançado",
+                rating = 10000,
+                id = 20,
+                nome = "Alvaro",
+                modalidade = "xadrez"
+            };
+            Console.WriteLine("objX.id: " + objX.id + ". objx.nome: " + objX.nome + ". objX.modalidade: " + objX.modalidade + ". objX.nivel: " + objX.nivel + ". objX.rating: " + objX.rating + ".");
+            Console.ReadLine();
+        }
+    }
+    public class Jogador
+    {
+        public int idade;
+        public Jogador(int idade)
+        {
+            this.idade = idade;
+        }
+        // Propriedades
+        public int id { get; set; }
+        public string nome { get; set; }
+        public string modalidade { get; set; }
+
+        // Metodos
+
+        public void Salvar() { }
+        public void Excluir() { }
+
+    }
+
+    public class Xadrez : Jogador
+        {
+        public Xadrez(int idade):base(10)
+        {
+            this.idade = idade;
+        }
+        public string nivel { get; set; }
+        public int rating { get; set; }
+        }
+}
