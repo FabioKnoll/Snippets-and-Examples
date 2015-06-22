@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace MVA_Mod1PTBR
+{
+    class objetoJogador
+    {
+        static void Main(string[] args)
+        {
+           var obj = new Jogador{
+               id = 10,
+               nome = "Paulo",
+               modalidade = "xadrez"
+           };
+            Console.WriteLine("A id do Jogador é " + obj.id + ", nome " + obj.nome + " e a modalidade " +obj.modalidade + ".");
+            Console.ReadLine();
+        }
+    }
+    public class Jogador
+    {
+        // Propriedades
+        public int id { get; set; }
+        public string nome { get; set; }
+        public string modalidade { get; set; }
+
+        // Metodos
+
+        public void Salvar() { }
+        public void Excluir() { }
+
+    }
+}
