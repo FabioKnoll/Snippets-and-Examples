@@ -1,0 +1,66 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include <string.h>
+
+int main (){
+
+// Dados e valores ficticios por razão de privacidade
+
+int anoNasc = 1990;
+float peso = 98;
+float altura = 170;
+int RA = 11223344;
+float IMC;
+int pausa, par, impar;
+int anoZero = 1900;
+
+int lastDuo = 44; // Ultimos dois numeros 
+int lastTer = 3; // Terceiro da direita para esquerda
+
+IMC = (peso/(altura * altura))*10000;
+int idade = (2015 - anoNasc);
+
+printf ("O aluno John Doe nasceu no ano de %li e tem %d anos.\nAtualmente tem %d kg e %li centimetros de altura.\n", anoNasc, idade, peso, altura);
+
+if (lastDuo >= 0 && lastDuo <=49)
+{
+ printf ("Os dois ultimos numeros sao %d e sua IMC e %.2f\n", lastDuo, IMC); 
+}
+
+if (lastDuo >= 50 && lastDuo <= 99)
+{
+ printf ("Os dois ultimos numeros sao %d e sua idade %li.\n", lastDuo, idade); 
+}
+
+if (lastDuo%2!=0)
+{
+impar = 0;
+for (anoZero != 0; anoZero < anoNasc; anoZero++)
+{
+	if (anoZero%2 != 0)
+	{
+ 		impar++;
+ 
+	}
+}
+	printf ("Ha %i numeros impares no calculo de 1900 a %i.\n", impar, anoNasc);
+}
+
+if (lastDuo%2==0)
+{
+par = 0;
+while (anoNasc < 2015)
+{
+	if (anoNasc%2 == 0)
+	{
+		 par++;
+	}
+anoNasc++;
+}
+printf ("Ha %i anos pares entre 1990 e 2015.\n", par);
+}
+
+scanf ("%d", &pausa);
+return(0);
+}
