@@ -1,0 +1,91 @@
+###############################################################################
+#NAGIOS PLUGIN TO MONITOR INFORMATION RETURNED BY OID
+#Developed by: FABIO SELEME KNOLL
+#Date: 17/09/2015
+#
+# This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License
+# as published by the Free Software Foundation; either version 2
+# of the License, or (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+#
+#Find me at https://github.com/FabioKnoll
+##################################################################################
+
+# TODO: FIX ERROR BELLOW
+#: command not foundoid: line 22:
+#'/check_version_by_oid: line 23: syntax error near unexpected token `{
+#'/check_version_by_oid: line 23: `print_help () {
+
+
+
+#!/bin/bash
+
+print_help () {
+
+        echo "./check_version_by_oid -H <HOSTADDRESS> <$ARG1$>"
+        echo "./check_version_by_oid -H 1.1.1.1 '1.2.3' "
+        echo "<$ARG1$> Equals to version to be checked"
+        echo "In the case the version returned is different than the one provided, return warning message"
+        echo "."
+        echo "For different OID alter VEROID line 37"
+              }
+checa () {
+
+
+
+VEROID='.1.3.6.1.4.1.9999.87'
+
+VEROIDCH=`snmpget -On -v2c -c SFSNMP $IP $VEROID | cut -d ":" -f 2 | awk '{print $1}'`
+
+#echo "[$VEROIDCH]"
+
+#VEROIDCH=`snmpget -On -v2c -c SFSNMP $IP $VEROID | /bin/grep "$SERVICE" | cut -d "." -f 12 | awk '{ print $1}'`
+
+
+
+        if [ "$VEROIDCH" == $VERSION ]; then
+                echo "OK: Version checked with success | util=$VEROIDCH"
+        exit 0
+        elif [ "$VEROIDCH" != $VERSION ]; then
+
+                echo "WARN: Version not equal | util=$VEROIDCH"
+                exit 1
+
+        else
+                echo "Not able to check though SNMP. Please verify! | `snmpget -On -v2c -c SFSNMP $IP $VEROIDCH`"
+
+                exit 2
+        fi
+
+
+}
+
+
+ case "$1" in
+         --help)
+                print_help
+                exit 3
+         ;;
+         -h)
+                print_help
+                exit 0
+        ;;
+         -H)
+                IP=$2
+                export IP
+                checa
+                VERSION=$3
+                export VERSION
+                checa
+                exit 0
+          ;;
+ esac
+
