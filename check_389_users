@@ -21,6 +21,8 @@
 
 # Command used: snmpwalk -v2c -c SFSNMP $IP TCP-MIB::tcp | grep $4 | wc -l
 
+# USE AT YOUR OWN RISK!
+
 #!/bin/sh
 print_help() {
 
