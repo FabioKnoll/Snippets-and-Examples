@@ -15,26 +15,33 @@
 #Find me at https://github.com/FabioKnoll
 ##################################################################################
 
-#TODO: TESTING AND VALIDATION
-#TODO: GRAPHICS
-#TODO: BETTER HELP DESCRIPTION
+# TODO: TESTING AND VALIDATION
+# TODO: GRAPHICS
+# TODO: BETTER HELP DESCRIPTION
+
+# Command used: snmpwalk -v2c -c SFSNMP $IP TCP-MIB::tcp | grep $4 | wc -l
 
 #!/bin/sh
 print_help() {
-        echo ""
-        echo ""
-        echo "This plug-in is to retrieve how many users are logged in the 389 port"
-        echo "The parameter -H is used to identify the host to retrieve the information"
-        echo "E.g. check_389_users -H 10.180.207.42 -p 398 -w 200 -c 250"
-        echo ""
-        exit 0
+
+$ cat <EOF
+
+Welcome!
+
+To use this plugin:
+
+./check_389_users -H <HOSTNAME> -p <PORTNUMBER> -w <WARNING> -c <CRITICAL> 
+
+
+EOF
+
 }
 
 teste_Host(){
-        PORT=$3
-        WARNING=$4
-        CRITICAL=$5
-        NUMBER=$(snmpwalk -v2c -c SFSNMP $IP TCP-MIB::tcp | grep $3 | wc -l)
+        PORT=$4
+        WARNING=$6
+        CRITICAL=$8
+        NUMBER=$(snmpwalk -v2c -c SFSNMP $IP TCP-MIB::tcp | grep $4 | wc -l)
         NEWNUMBER=$(($NUMBER / 5))
 
         echo "At the moment theres $NEWNUMBER users conected to this server by port $PORT | users_389=$NEWNUMBER;$WARNING;$CRITICAL;0;1000"
@@ -67,20 +74,20 @@ case "$1" in
                 ;;
 				
         -p)
-                IP=$3
-                export IP
+                PORT=$4
+                export PORT
                 teste_Host
                 exit 0
                 ;;
         -w)
-                IP=$4
-                export IP
+                WARNING=$6
+                export WARNING
                 teste_Host
                 exit 0
                 ;;
         -c)
-                IP=$5
-                export IP
+                CRITICAL=$8
+                export CRITICAL
                 teste_Host
                 exit 0
                 ;;
