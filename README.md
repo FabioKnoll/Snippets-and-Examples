@@ -1,3 +1,3 @@
 # Snippets-and-Examples
 
-This directory is intended for training snippets and examples 
+Random | C# | C++ | Java | Shell script training snippets and examples 
